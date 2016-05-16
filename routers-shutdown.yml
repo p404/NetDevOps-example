@@ -1,0 +1,17 @@
+---
+- name: "Shutdown routers"
+  hosts: vsrx
+  connection: local 
+  roles:
+    - Juniper.junos 
+  gather_facts: no 
+
+  tasks:
+  - name: Shutdown routers
+    junos_shutdown:
+      user=root
+      passwd=Juniper
+      port={{ ncssh_port }}
+      host={{ ip_addr }}
+      shutdown="shutdown"
+    register: junos

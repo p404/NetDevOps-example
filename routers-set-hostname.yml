@@ -1,0 +1,18 @@
+---
+- name: "Set routers host-name"
+  hosts: vsrx
+  connection: local 
+  roles:
+    - Juniper.junos 
+  gather_facts: no 
+
+  tasks:
+  - name: Set routers host-name
+    junos_install_config:
+      user=root
+      passwd=Juniper
+      port={{ ncssh_port }}
+      host={{ ip_addr }}
+      file=set_hostname.conf
+      overwrite=false
+    register: junos

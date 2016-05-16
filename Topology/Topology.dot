@@ -10,23 +10,26 @@ digraph G {
             <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
                 <tr><td bgcolor="lightblue"><b>vSRX01</b></td></tr>
                 <tr><td align="left">IP: 192.168.12.11</td></tr>
+                <tr><td align="left">IP: 192.168.31.11</td></tr>
             </table>
         >];
         vrsx02 [label=<
             <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
                 <tr><td bgcolor="lightblue"><b>vSRX02</b></td></tr>
                 <tr><td align="left">IP: 192.168.23.12</td></tr>
+                <tr><td align="left">IP: 192.168.12.12</td></tr>
             </table>
         >];
         vrsx03 [label=<
             <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
                 <tr><td bgcolor="lightblue"><b>vSRX03</b></td></tr>
                 <tr><td align="left">IP: 192.168.31.13</td></tr>
+                <tr><td align="left">IP: 192.168.23.13</td></tr>
             </table>
         >];  
 
-    {rank=same vrsx02 -> vrsx03}
-    vrsx03 -> vrsx01
-    vrsx01 -> vrsx02    
+    {rank=same vrsx02 -> vrsx03 [ label = "02-to-03" ]} 
+    vrsx03 -> vrsx01 [ label = "03-to-01" ]
+    vrsx01 -> vrsx02 [ label = "01-to-02" ]   
  
 }

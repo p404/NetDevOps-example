@@ -1,6 +1,0 @@
----
-- hosts: all
-  gather_facts: False
-  tasks:
-  - name: uptime
-    raw: cli show system uptime
