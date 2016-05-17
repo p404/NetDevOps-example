@@ -24,5 +24,5 @@ Here, you can find an example doing configuration management to JunOS (vSRX) usi
 ## Available ansible playbooks:
 
     ansible-playbook -i hosts routers-info.yml
-    ansible-playbook -i routers-set-hostname.yml
-    ansible-playbook -i routers-shutdown.yml
+    ansible-playbook -i hosts routers-set-hostname.yml
+    ansible-playbook -i hosts routers-shutdown.yml
