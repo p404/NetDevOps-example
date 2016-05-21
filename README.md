@@ -1,6 +1,14 @@
 # NetDevOps Example
 Here, you can find an example doing configuration management to JunOS (vSRX) using Ansible.
 
+## Topology
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/p404/NetDevOps-example/master/Topology/Topology.png" width="400px"/>
+</p>
+
+
+
 ## Installation steps on Ubuntu 16.04
 * Vagrant
     * Install Vagrant
